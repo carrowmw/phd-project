@@ -1,0 +1,31 @@
+{
+    "kwargs": {
+        "completeness_threshold": 0.5
+    },
+    "preprocessing_steps": [
+        {
+            "name": "src.data_processing.cleaning.remove_directionality_feature",
+            "kwargs": {
+                "features_to_include_on_aggregation": null
+            }
+        },
+        {
+            "name": "src.data_processing.cleaning.remove_incomplete_days",
+            "kwargs": {}
+        },
+        {
+            "name": "src.data_processing.cleaning.find_longest_consecutive_sequence",
+            "kwargs": {
+                "max_length_limit": 30
+            }
+        },
+        {
+            "name": "src.data_processing.cleaning.remove_specified_fields",
+            "kwargs": {
+                "columns_to_drop": [
+                    "Time_Difference"
+                ]
+            }
+        }
+    ]
+}

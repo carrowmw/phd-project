@@ -1,0 +1,38 @@
+{
+    "api": {
+        "base_url": "https://newcastle.urbanobservatory.ac.uk/api/v1.1/",
+        "token": "your_api_token",
+        "endpoints": {
+            "sensors": {
+                "url": "sensors/json",
+                "params": {
+                    "theme": "People"
+                }
+            },
+            "sensor_types": {
+                "url": "sensors/types/json",
+                "params": {}
+            },
+            "themes": {
+                "url": "themes/json",
+                "params": {}
+            },
+            "variables": {
+                "url": "variables/json",
+                "params": {}
+            },
+            "raw_sensor_data": {
+                "url": "sensors/{sensor_name}/data/json",
+                "params": {
+                    "last_n_days": 20
+                }
+            }
+        },
+        "coords": [
+            -1.61602,
+            54.97397,
+            -1.61426,
+            54.97482
+        ]
+    }
+}

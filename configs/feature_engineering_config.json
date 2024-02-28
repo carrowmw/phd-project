@@ -1,0 +1,26 @@
+{
+    "feature_engineering_steps": [
+        {
+            "name": "src.data_processing.feature_engineering.add_term_dates_feature",
+            "kwargs": {}
+        },
+        {
+            "name": "src.data_processing.feature_engineering.create_periodicity_features",
+            "kwargs": {}
+        },
+        {
+            "name": "src.data_processing.feature_engineering.extract_time_features",
+            "kwargs": {}
+        },
+        {
+            "name": "src.data_processing.feature_engineering.scale_features",
+            "kwargs": {}
+        },
+        {
+            "name": "src.data_processing.feature_engineering.resample_frequency",
+            "kwargs": {
+                "frequency": null
+            }
+        }
+    ]
+}

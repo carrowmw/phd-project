@@ -1,0 +1,141 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_57c9b683 [label="8: handle_api_response()" name="api_utils::handle_api_response" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8a5fc0ef [label="29: make_api_request()" name="api_utils::make_api_request" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_480d8a22 [label="0: (global)()" name="data_loaders::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8c0b05dd [label="16: create_file_path_from_config()" name="data_loaders::create_file_path_from_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ab675705 [label="35: download_and_save_raw_data()" name="data_loaders::download_and_save_raw_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_2c042cf6 [label="59: fetch_raw_data()" name="data_loaders::fetch_raw_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_42558f46 [label="79: process_raw_data()" name="data_loaders::process_raw_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_fae78c5e [label="195: apply_preprocessing_steps()" name="preprocess_data::apply_preprocessing_steps" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_497925a7 [label="103: check_completeness()" name="preprocess_data::check_completeness" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d4a5efcc [label="38: compute_max_daily_records()" name="preprocess_data::compute_max_daily_records" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_98f0ca52 [label="141: find_longest_consecutive_sequence()" name="preprocess_data::find_longest_consecutive_sequence" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2a0f564c [label="205: preprocess_data()" name="preprocess_data::preprocess_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0d1d0116 [label="58: remove_incomplete_days()" name="preprocess_data::remove_incomplete_days" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bb8a58fc [label="34: request()" name="raw_sensor_data_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_99c681f6 [label="283: execute_raw_sensor_data_request()" name="sensor_data_preprocessing::execute_raw_sensor_data_request" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5de13051 [label="201: execute_sensor_type_request()" name="sensor_data_preprocessing::execute_sensor_type_request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7edcb5ba [label="243: execute_sensors_request()" name="sensor_data_preprocessing::execute_sensors_request" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ccdfe86e [label="226: execute_themes_request()" name="sensor_data_preprocessing::execute_themes_request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_29f5ab74 [label="214: execute_variables_request()" name="sensor_data_preprocessing::execute_variables_request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a7db93c2 [label="99: get_all_sensor_data_parallel()" name="sensor_data_preprocessing::get_all_sensor_data_parallel" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_2b07e362 [label="21: json_to_dataframe()" name="sensor_data_preprocessing::json_to_dataframe" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_fb59422a [label="34: print_api_response_information()" name="sensor_data_preprocessing::print_api_response_information" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_513c3818 [label="129: print_sensor_request_metrics()" name="sensor_data_preprocessing::print_sensor_request_metrics" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_34863b13 [label="57: process_sensor_data()" name="sensor_data_preprocessing::process_sensor_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_575c013b [label="19: request()" name="sensor_types_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_48c89663 [label="19: request()" name="sensors_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d39517fc [label="19: request()" name="themes_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3d127b35 [label="19: request()" name="variables_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_480d8a22 -> node_42558f46 [color="#56B4E9" penwidth="2"];
+node_ab675705 -> node_99c681f6 [color="#0072B2" penwidth="2"];
+node_ab675705 -> node_7edcb5ba [color="#0072B2" penwidth="2"];
+node_ab675705 -> node_513c3818 [color="#0072B2" penwidth="2"];
+node_2c042cf6 -> node_8c0b05dd [color="#D55E00" penwidth="2"];
+node_2c042cf6 -> node_ab675705 [color="#D55E00" penwidth="2"];
+node_42558f46 -> node_2c042cf6 [color="#D55E00" penwidth="2"];
+node_42558f46 -> node_2a0f564c [color="#D55E00" penwidth="2"];
+node_497925a7 -> node_d4a5efcc [color="#CC79A7" penwidth="2"];
+node_98f0ca52 -> node_d4a5efcc [color="#56B4E9" penwidth="2"];
+node_2a0f564c -> node_fae78c5e [color="#F0E442" penwidth="2"];
+node_0d1d0116 -> node_d4a5efcc [color="#D55E00" penwidth="2"];
+node_bb8a58fc -> node_57c9b683 [color="#F0E442" penwidth="2"];
+node_bb8a58fc -> node_8a5fc0ef [color="#F0E442" penwidth="2"];
+node_99c681f6 -> node_a7db93c2 [color="#D55E00" penwidth="2"];
+node_99c681f6 -> node_513c3818 [color="#D55E00" penwidth="2"];
+node_5de13051 -> node_2b07e362 [color="#E69F00" penwidth="2"];
+node_7edcb5ba -> node_2b07e362 [color="#56B4E9" penwidth="2"];
+node_ccdfe86e -> node_2b07e362 [color="#D55E00" penwidth="2"];
+node_29f5ab74 -> node_2b07e362 [color="#F0E442" penwidth="2"];
+node_a7db93c2 -> node_34863b13 [color="#56B4E9" penwidth="2"];
+node_34863b13 -> node_2b07e362 [color="#009E73" penwidth="2"];
+node_34863b13 -> node_fb59422a [color="#009E73" penwidth="2"];
+node_34863b13 -> node_fb59422a [color="#009E73" penwidth="2"];
+node_34863b13 -> node_fb59422a [color="#009E73" penwidth="2"];
+node_575c013b -> node_57c9b683 [color="#009E73" penwidth="2"];
+node_575c013b -> node_8a5fc0ef [color="#009E73" penwidth="2"];
+node_48c89663 -> node_57c9b683 [color="#009E73" penwidth="2"];
+node_48c89663 -> node_8a5fc0ef [color="#009E73" penwidth="2"];
+node_d39517fc -> node_57c9b683 [color="#F0E442" penwidth="2"];
+node_d39517fc -> node_8a5fc0ef [color="#F0E442" penwidth="2"];
+node_3d127b35 -> node_57c9b683 [color="#0072B2" penwidth="2"];
+node_3d127b35 -> node_8a5fc0ef [color="#0072B2" penwidth="2"];
+subgraph cluster_a1c90888 {
+    node_57c9b683 node_8a5fc0ef;
+    label="File: api_utils";
+    name="api_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_3c4aa740 {
+    node_8c0b05dd node_ab675705 node_2c042cf6 node_42558f46 node_480d8a22;
+    label="File: data_loaders";
+    name="data_loaders";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_1c8f0813 {
+    node_d4a5efcc node_0d1d0116 node_497925a7 node_98f0ca52 node_fae78c5e node_2a0f564c;
+    label="File: preprocess_data";
+    name="preprocess_data";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_99e80569 {
+    node_bb8a58fc;
+    label="File: raw_sensor_data_api";
+    name="raw_sensor_data_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_e58d377c {
+    node_2b07e362 node_fb59422a node_34863b13 node_a7db93c2 node_513c3818 node_5de13051 node_29f5ab74 node_ccdfe86e node_7edcb5ba node_99c681f6;
+    label="File: sensor_data_preprocessing";
+    name="sensor_data_preprocessing";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_54b3f771 {
+    node_575c013b;
+    label="File: sensor_types_api";
+    name="sensor_types_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_341ad524 {
+    node_48c89663;
+    label="File: sensors_api";
+    name="sensors_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_a399395c {
+    node_d39517fc;
+    label="File: themes_api";
+    name="themes_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_b4d59a16 {
+    node_3d127b35;
+    label="File: variables_api";
+    name="variables_api";
+    style="filled";
+    graph[style=dotted];
+};
+}
