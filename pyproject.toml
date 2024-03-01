@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "phd-project"
+version = "0.1.0"
+description = "programme for building, testing, and deploying machine learning models fed on urban observatory data"
+authors = ["Carrow Morris-Wiltshire"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dash = ">= 2.15.0"
+matplotlib = ">=3.8.3"
+networkx = ">=3.2.1"
+pandas = ">=2.2.0"
+plotly = ">=5.19.0"
+requests = ">=2.31.0"
+scikit-learn = ">=1.4.1.post1"
+scipy = ">=1.12.0"
+shapely = ">=2.0.2"
+torch = ">=2.2.0"
+typing-extension = ">=4.9.0"
+urllib3 = ">=2.2.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0.1"
+code2flow = ">=2.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
