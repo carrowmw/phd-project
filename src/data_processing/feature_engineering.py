@@ -3,22 +3,19 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
 
-def scale_features(df: pd.DataFrame, **kwargs) -> np.ndarray:
+def scale_features(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     """
-    Scales the 'value' column of the input DataFrame using StandardScaler, standardizing the
-    feature by removing the mean and scaling to unit variance.
+    Scales all values in the DataFrame between 0 and 1 using MinMaxScaler.
 
     Args:
         df (pd.DataFrame): DataFrame with the data to be scaled.
 
     Returns:
-        np.ndarray: The scaled version of the input data as a numpy array.
+        pd.DataFrame: The scaled version of the input data as a DataFrame.
     """
-    print(f"\n\nAttempting to scale:\n{df.dtypes}\n")
-    print(f"\n\nData:\n{df}")
     scaler = MinMaxScaler()
-    df["value"] = scaler.fit_transform(df["Value"].values.reshape(-1, 1))
-    scaled_df = df.to_numpy().astype(np.float64)
+    scaled_values = scaler.fit_transform(df)  # Apply scaler to df directly
+    scaled_df = pd.DataFrame(scaled_values, index=df.index, columns=df.columns)
     return scaled_df
 
 
@@ -71,7 +68,7 @@ def add_term_dates_feature(df: pd.DataFrame) -> pd.DataFrame:
     # Define the date range for the series
     start = min(df.index.min(), df.index.min())
     end = max(df.index.max(), df.index.max())
-    date_range = pd.date_range(start=start, end=end, freq="15T")
+    date_range = pd.date_range(start=start, end=end, freq="15min")
 
     # Define the start and end dates for each term
     newcastle_term_dates_2122 = [
@@ -211,12 +208,12 @@ def extract_time_features(df):
     df["Timestamp"] = pd.to_datetime(df["Timestamp"])
 
     # Extract features
-    df["Year"] = df["Timestamp"].dt.year
-    df["Month"] = df["Timestamp"].dt.month
-    df["Day"] = df["Timestamp"].dt.day
-    df["Hour"] = df["Timestamp"].dt.hour
-    df["DayOfWeek"] = df["Timestamp"].dt.dayofweek
-    df["DayOfYear"] = df["Timestamp"].dt.dayofyear
+    df["Year"] = df["Timestamp"].dt.year.astype(float)
+    df["Month"] = df["Timestamp"].dt.month.astype(float)
+    df["Day"] = df["Timestamp"].dt.day.astype(float)
+    df["Hour"] = df["Timestamp"].dt.hour.astype(float)
+    df["DayOfWeek"] = df["Timestamp"].dt.dayofweek.astype(float)
+    df["DayOfYear"] = df["Timestamp"].dt.dayofyear.astype(float)
 
     # Remove 'Timestamp' column
     df.drop(columns=["Timestamp"], inplace=True)

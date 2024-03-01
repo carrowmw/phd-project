@@ -11,7 +11,7 @@ import plotly.express as px
 from dash import dcc, html
 from dash.dependencies import Input, Output
 
-from src.data_processing.sensor_data_preprocessing import (
+from data_processing.execute_requests import (
     execute_sensors_request,
     execute_raw_sensor_data_request,
     get_daily_counts_dataframes,
