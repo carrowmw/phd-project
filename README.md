@@ -86,4 +86,4 @@ Merge Requests: Merge feature branches back into develop after completion and re
 
 Call graph for the project:
 
-!(/docs/pipeline_flowchart.png)
+![image](/docs/pipeline_flowchart.png)
