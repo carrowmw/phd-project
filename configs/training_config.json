@@ -1,0 +1,9 @@
+{
+    "kwargs": {
+        "epochs": 50,
+        "device": "mps",
+        "optimiser": "adam",
+        "lr": 0.01,
+        "criterion": "mse",
+    }
+}

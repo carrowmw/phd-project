@@ -1,3 +1,6 @@
+import torch.nn as nn
+
+
 class LinearModel(nn.Module):
     """
     A simple linear regression model suitable for time series forecasting.

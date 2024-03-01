@@ -6,9 +6,9 @@ This project, phd-project, is (will be) a comprehensive programme designed for b
 ## Prerequisites
 Before you begin, ensure you have the following installed on your system:
 
-Python (version 3.10 or higher recommended).
-[Poetry](https://python-poetry.org/docs/) for dependency management and packaging.
-(Optional) pyenv for managing multiple Python versions.
+*Python (version 3.10 or higher recommended).
+*[Poetry](https://python-poetry.org/docs/) for dependency management and packaging.
+*(Optional) pyenv for managing multiple Python versions.
 
 ## Step 1: Clone the Repository
 First, clone the project repository to your local machine using Git. Open a terminal and run:
@@ -73,7 +73,6 @@ Not open to contributors currently, but feel free to fork, updates to come soon.
 # Apps
 The app.yaml file serves as a crucial configuration component for applications deployed on platforms like Google App Engine. It defines the runtime environment, resource allocation, scaling options, and other deployment settings specific to the application. This file allows developers to specify environment variables, handler scripts, security settings, and more, ensuring the application runs smoothly in the deployed environment. By customising app.yaml, you can tailor the deployment to meet the application's requirements, such as managing traffic, integrating services, and optimising performance.
 
-
 # Git
 Main Branch: Contains stable and production-ready code.
 
@@ -82,3 +81,9 @@ Development Branch: For development work and feature integration. Use git checko
 Feature Branches: For new features, create branches off develop. Name them meaningfully, e.g., feature/new-data-processing.
 
 Merge Requests: Merge feature branches back into develop after completion and review. Once develop is stable, merge it into main.
+
+# Progress
+
+Call graph for the project:
+
+!(/docs/pipeline_flowchart.png)

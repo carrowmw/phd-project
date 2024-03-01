@@ -1,0 +1,332 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_42646cda [label="8: handle_api_response()" name="api_utils::handle_api_response" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7e32c4f2 [label="29: make_api_request()" name="api_utils::make_api_request" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9af7b184 [label="26: get_custom_colormap()" name="custom_plots::get_custom_colormap" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_971a24fe [label="1: get_custom_palette()" name="custom_plots::get_custom_palette" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_afe26ff0 [label="116: plot_mv_windows()" name="custom_plots::plot_mv_windows" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b1750557 [label="52: plot_windows()" name="custom_plots::plot_windows" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_989ce04a [label="16: create_file_path_from_config()" name="data_loaders::create_file_path_from_config" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_77e18656 [label="35: download_and_save_raw_data()" name="data_loaders::download_and_save_raw_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_8a786598 [label="59: fetch_raw_data()" name="data_loaders::fetch_raw_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_11b57a76 [label="1: compute_metrics()" name="evaluate::compute_metrics" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a2c6c438 [label="49: evaluate_linear_model()" name="evaluate::evaluate_linear_model" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_41b3821d [label="188: evaluate_lstm_model()" name="evaluate::evaluate_lstm_model" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_22eea006 [label="6: compute_performance_metrics()" name="evaluation_metrics::compute_performance_metrics" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1278afcb [label="283: execute_raw_sensor_data_request()" name="execute_requests::execute_raw_sensor_data_request" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_243bc2b8 [label="201: execute_sensor_type_request()" name="execute_requests::execute_sensor_type_request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a2fa64b4 [label="243: execute_sensors_request()" name="execute_requests::execute_sensors_request" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_cf48bfdd [label="226: execute_themes_request()" name="execute_requests::execute_themes_request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2653f692 [label="214: execute_variables_request()" name="execute_requests::execute_variables_request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_02d47a6c [label="99: get_all_sensor_data_parallel()" name="execute_requests::get_all_sensor_data_parallel" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5a139b2f [label="21: json_to_dataframe()" name="execute_requests::json_to_dataframe" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_70bc9a89 [label="34: print_api_response_information()" name="execute_requests::print_api_response_information" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a1f0cd80 [label="129: print_sensor_request_metrics()" name="execute_requests::print_sensor_request_metrics" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_dfa540e4 [label="57: process_sensor_data()" name="execute_requests::process_sensor_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f3668ece [label="6: load_config()" name="general_utils::load_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_aa5b3f03 [label="64: __init__()" name="model_definitions::LSTMModel.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ffbbe05c [label="30: __init__()" name="model_definitions::LinearModel.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_30c294f7 [label="1: save_model_state()" name="model_utils::save_model_state" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0041f297 [label="0: (global)()" name="modelling_functions::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9a9cf60f [label="0: (global)()" name="pipeline::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_94310264 [label="30: apply_feature_engineering()" name="pipeline::apply_feature_engineering" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_e664736b [label="60: load_training_data()" name="pipeline::load_training_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_a85ee3fe [label="8: preprocess_raw_data()" name="pipeline::preprocess_raw_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_30ae8357 [label="6: apply_steps()" name="pipeline_utils::apply_steps" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_671b19e6 [label="29: process_data()" name="pipeline_utils::process_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_cc4ec330 [label="9: create_wkb_polygon()" name="polygon_utils::create_wkb_polygon" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a3504078 [label="93: check_completeness()" name="preprocessing::check_completeness" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e32df680 [label="28: compute_max_daily_records()" name="preprocessing::compute_max_daily_records" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cc3d29fb [label="131: find_longest_consecutive_sequence()" name="preprocessing::find_longest_consecutive_sequence" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_92f24516 [label="48: remove_incomplete_days()" name="preprocessing::remove_incomplete_days" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_95a360d3 [label="34: request()" name="raw_sensor_data_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6783723e [label="19: request()" name="sensor_types_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9b39584d [label="19: request()" name="sensors_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1dd97a94 [label="19: request()" name="themes_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1b9a069a [label="0: (global)()" name="train copy::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3c17cb2c [label="179: main()" name="train copy::main" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_2c7ff2dc [label="29: train_linear_model()" name="train copy::train_linear_model" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_56f1d885 [label="106: train_lstm_model()" name="train copy::train_lstm_model" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_23b09d74 [label="4: train()" name="train::train" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_452b9464 [label="15: __init__()" name="training_datasets::TimeSeriesDataset.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_89e7ee75 [label="61: prepare_dataloaders()" name="training_loader::prepare_dataloaders" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f2a6cb2a [label="6: check_mps_availability()" name="training_utils::check_mps_availability" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_961ffbb7 [label="102: create_criterion()" name="training_utils::create_criterion" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b39950fa [label="61: create_optimiser()" name="training_utils::create_optimiser" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5eae163f [label="30: map_model_to_mps()" name="training_utils::map_model_to_mps" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4dab5084 [label="43: map_tensor_to_mps()" name="training_utils::map_tensor_to_mps" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_aa6ce6fe [label="19: request()" name="variables_api::request" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_afe26ff0 -> node_971a24fe [color="#000000" penwidth="2"];
+node_b1750557 -> node_971a24fe [color="#CC79A7" penwidth="2"];
+node_989ce04a -> node_f3668ece [color="#56B4E9" penwidth="2"];
+node_989ce04a -> node_cc4ec330 [color="#56B4E9" penwidth="2"];
+node_77e18656 -> node_1278afcb [color="#D55E00" penwidth="2"];
+node_77e18656 -> node_a2fa64b4 [color="#D55E00" penwidth="2"];
+node_77e18656 -> node_a1f0cd80 [color="#D55E00" penwidth="2"];
+node_8a786598 -> node_989ce04a [color="#000000" penwidth="2"];
+node_8a786598 -> node_77e18656 [color="#000000" penwidth="2"];
+node_a2c6c438 -> node_11b57a76 [color="#000000" penwidth="2"];
+node_a2c6c438 -> node_22eea006 [color="#000000" penwidth="2"];
+node_a2c6c438 -> node_ffbbe05c [color="#000000" penwidth="2"];
+node_a2c6c438 -> node_30c294f7 [color="#000000" penwidth="2"];
+node_a2c6c438 -> node_89e7ee75 [color="#000000" penwidth="2"];
+node_41b3821d -> node_11b57a76 [color="#0072B2" penwidth="2"];
+node_41b3821d -> node_22eea006 [color="#0072B2" penwidth="2"];
+node_41b3821d -> node_aa5b3f03 [color="#0072B2" penwidth="2"];
+node_41b3821d -> node_30c294f7 [color="#0072B2" penwidth="2"];
+node_41b3821d -> node_89e7ee75 [color="#0072B2" penwidth="2"];
+node_1278afcb -> node_02d47a6c [color="#009E73" penwidth="2"];
+node_1278afcb -> node_a1f0cd80 [color="#009E73" penwidth="2"];
+node_243bc2b8 -> node_5a139b2f [color="#000000" penwidth="2"];
+node_a2fa64b4 -> node_5a139b2f [color="#F0E442" penwidth="2"];
+node_a2fa64b4 -> node_f3668ece [color="#F0E442" penwidth="2"];
+node_a2fa64b4 -> node_cc4ec330 [color="#F0E442" penwidth="2"];
+node_cf48bfdd -> node_5a139b2f [color="#0072B2" penwidth="2"];
+node_2653f692 -> node_5a139b2f [color="#56B4E9" penwidth="2"];
+node_02d47a6c -> node_dfa540e4 [color="#F0E442" penwidth="2"];
+node_dfa540e4 -> node_5a139b2f [color="#F0E442" penwidth="2"];
+node_dfa540e4 -> node_70bc9a89 [color="#F0E442" penwidth="2"];
+node_dfa540e4 -> node_70bc9a89 [color="#F0E442" penwidth="2"];
+node_dfa540e4 -> node_70bc9a89 [color="#F0E442" penwidth="2"];
+node_0041f297 -> node_9af7b184 [color="#CC79A7" penwidth="2"];
+node_0041f297 -> node_971a24fe [color="#CC79A7" penwidth="2"];
+node_9a9cf60f -> node_94310264 [color="#CC79A7" penwidth="2"];
+node_9a9cf60f -> node_e664736b [color="#CC79A7" penwidth="2"];
+node_9a9cf60f -> node_a85ee3fe [color="#CC79A7" penwidth="2"];
+node_94310264 -> node_671b19e6 [color="#F0E442" penwidth="2"];
+node_e664736b -> node_671b19e6 [color="#009E73" penwidth="2"];
+node_a85ee3fe -> node_8a786598 [color="#D55E00" penwidth="2"];
+node_a85ee3fe -> node_f3668ece [color="#D55E00" penwidth="2"];
+node_a85ee3fe -> node_671b19e6 [color="#D55E00" penwidth="2"];
+node_671b19e6 -> node_f3668ece [color="#D55E00" penwidth="2"];
+node_671b19e6 -> node_30ae8357 [color="#D55E00" penwidth="2"];
+node_a3504078 -> node_f3668ece [color="#000000" penwidth="2"];
+node_a3504078 -> node_f3668ece [color="#000000" penwidth="2"];
+node_a3504078 -> node_e32df680 [color="#000000" penwidth="2"];
+node_cc3d29fb -> node_f3668ece [color="#009E73" penwidth="2"];
+node_cc3d29fb -> node_e32df680 [color="#009E73" penwidth="2"];
+node_92f24516 -> node_f3668ece [color="#D55E00" penwidth="2"];
+node_92f24516 -> node_e32df680 [color="#D55E00" penwidth="2"];
+node_95a360d3 -> node_42646cda [color="#009E73" penwidth="2"];
+node_95a360d3 -> node_7e32c4f2 [color="#009E73" penwidth="2"];
+node_6783723e -> node_42646cda [color="#D55E00" penwidth="2"];
+node_6783723e -> node_7e32c4f2 [color="#D55E00" penwidth="2"];
+node_9b39584d -> node_42646cda [color="#0072B2" penwidth="2"];
+node_9b39584d -> node_7e32c4f2 [color="#0072B2" penwidth="2"];
+node_1dd97a94 -> node_42646cda [color="#F0E442" penwidth="2"];
+node_1dd97a94 -> node_7e32c4f2 [color="#F0E442" penwidth="2"];
+node_1b9a069a -> node_3c17cb2c [color="#56B4E9" penwidth="2"];
+node_3c17cb2c -> node_a2c6c438 [color="#F0E442" penwidth="2"];
+node_3c17cb2c -> node_41b3821d [color="#F0E442" penwidth="2"];
+node_2c7ff2dc -> node_23b09d74 [color="#F0E442" penwidth="2"];
+node_56f1d885 -> node_23b09d74 [color="#0072B2" penwidth="2"];
+node_23b09d74 -> node_961ffbb7 [color="#F0E442" penwidth="2"];
+node_23b09d74 -> node_b39950fa [color="#F0E442" penwidth="2"];
+node_89e7ee75 -> node_452b9464 [color="#0072B2" penwidth="2"];
+node_89e7ee75 -> node_452b9464 [color="#0072B2" penwidth="2"];
+node_5eae163f -> node_f2a6cb2a [color="#CC79A7" penwidth="2"];
+node_4dab5084 -> node_f2a6cb2a [color="#F0E442" penwidth="2"];
+node_aa6ce6fe -> node_42646cda [color="#D55E00" penwidth="2"];
+node_aa6ce6fe -> node_7e32c4f2 [color="#D55E00" penwidth="2"];
+subgraph cluster_1d73ace5 {
+    node_42646cda node_7e32c4f2;
+    label="File: api_utils";
+    name="api_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_cddacb08 {
+    node_971a24fe node_9af7b184 node_b1750557 node_afe26ff0;
+    label="File: custom_plots";
+    name="custom_plots";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_27ece14b {
+    node_989ce04a node_77e18656 node_8a786598;
+    label="File: data_loaders";
+    name="data_loaders";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_42ba0d55 {
+    node_11b57a76 node_a2c6c438 node_41b3821d;
+    label="File: evaluate";
+    name="evaluate";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_8cd3e787 {
+    node_22eea006;
+    label="File: evaluation_metrics";
+    name="evaluation_metrics";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_9ceb174c {
+    node_5a139b2f node_70bc9a89 node_dfa540e4 node_02d47a6c node_a1f0cd80 node_243bc2b8 node_2653f692 node_cf48bfdd node_a2fa64b4 node_1278afcb;
+    label="File: execute_requests";
+    name="execute_requests";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_57ce980a {
+    node_f3668ece;
+    label="File: general_utils";
+    name="general_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_16eb29a0 {
+    label="File: model_definitions";
+    name="model_definitions";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_47a48d07 {
+        node_ffbbe05c;
+        label="Class: LinearModel";
+        name="LinearModel";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e1e1aad5 {
+        node_aa5b3f03;
+        label="Class: LSTMModel";
+        name="LSTMModel";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_b1327830 {
+    node_30c294f7;
+    label="File: model_utils";
+    name="model_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_1d38e8dd {
+    node_0041f297;
+    label="File: modelling_functions";
+    name="modelling_functions";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_a4976f0b {
+    node_a85ee3fe node_94310264 node_e664736b node_9a9cf60f;
+    label="File: pipeline";
+    name="pipeline";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_b139fb6b {
+    node_30ae8357 node_671b19e6;
+    label="File: pipeline_utils";
+    name="pipeline_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_5016a271 {
+    node_cc4ec330;
+    label="File: polygon_utils";
+    name="polygon_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_b6e04257 {
+    node_e32df680 node_92f24516 node_a3504078 node_cc3d29fb;
+    label="File: preprocessing";
+    name="preprocessing";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_b733f1b0 {
+    node_95a360d3;
+    label="File: raw_sensor_data_api";
+    name="raw_sensor_data_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_fcbea983 {
+    node_6783723e;
+    label="File: sensor_types_api";
+    name="sensor_types_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_072a60a7 {
+    node_9b39584d;
+    label="File: sensors_api";
+    name="sensors_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_ba1fdedf {
+    node_1dd97a94;
+    label="File: themes_api";
+    name="themes_api";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_30f512fb {
+    node_23b09d74;
+    label="File: train";
+    name="train";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_bb309338 {
+    node_2c7ff2dc node_56f1d885 node_3c17cb2c node_1b9a069a;
+    label="File: train copy";
+    name="train copy";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_0494b5b2 {
+    label="File: training_datasets";
+    name="training_datasets";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_de70f8ab {
+        node_452b9464;
+        label="Class: TimeSeriesDataset";
+        name="TimeSeriesDataset";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_1e2a181b {
+    node_89e7ee75;
+    label="File: training_loader";
+    name="training_loader";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_ef759d71 {
+    node_f2a6cb2a node_5eae163f node_4dab5084 node_b39950fa node_961ffbb7;
+    label="File: training_utils";
+    name="training_utils";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_d4066db9 {
+    node_aa6ce6fe;
+    label="File: variables_api";
+    name="variables_api";
+    style="filled";
+    graph[style=dotted];
+};
+}
