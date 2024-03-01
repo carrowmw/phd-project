@@ -6,11 +6,9 @@ This project, phd-project, is (will be) a comprehensive programme designed for b
 ## Prerequisites
 Before you begin, ensure you have the following installed on your system:
 
-Python (version 3.10 or higher recommended)
-Poetry for dependency management and packaging
-(Optional) pyenv for managing multiple Python versions
-
-Poetry for dependency management and packaging ![link](https://python-poetry.org/docs/).
+Python (version 3.10 or higher recommended).
+[Poetry](https://python-poetry.org/docs/) for dependency management and packaging.
+(Optional) pyenv for managing multiple Python versions.
 
 ## Step 1: Clone the Repository
 First, clone the project repository to your local machine using Git. Open a terminal and run:
