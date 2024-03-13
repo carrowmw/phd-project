@@ -5,25 +5,31 @@
     "preprocessing_steps": [
         {
             "name": "src.data_processing.preprocessing.remove_directionality_feature",
+            "execute_step": true,
             "kwargs": {
                 "features_to_include_on_aggregation": null
             }
         },
         {
             "name": "src.data_processing.preprocessing.remove_incomplete_days",
+            "execute_step": true,
             "kwargs": {}
         },
         {
             "name": "src.data_processing.preprocessing.find_longest_consecutive_sequence",
+            "execute_step": true,
             "kwargs": {
-                "max_length_limit": 30
+                "max_length_limit": 300
             }
         },
         {
             "name": "src.data_processing.preprocessing.remove_specified_fields",
+            "execute_step": true,
             "kwargs": {
                 "columns_to_drop": [
-                    "Time_Difference"
+                    "Time_Difference",
+                    "Interval_Minutes",
+                    "Timestamp"
                 ]
             }
         }

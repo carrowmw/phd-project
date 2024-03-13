@@ -24,7 +24,7 @@
             "raw_sensor_data": {
                 "url": "sensors/{sensor_name}/data/json",
                 "params": {
-                    "last_n_days": 20
+                    "last_n_days": 30
                 }
             }
         },

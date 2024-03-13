@@ -35,6 +35,20 @@ def get_step_config(step_name, config):
     return {}
 
 
+def should_execute_step(step_config):
+    """
+    Determines whether a step should be executed based on its configuration.
+
+    Args:
+        step_config (dict): The configuration for the step, containing optional execute_step boolean.
+
+    Returns:
+        bool: True if the step should be executed, False otherwise.
+    """
+    # Default to True if execute_step is not specified
+    return step_config.get("execute_step", True)
+
+
 def extract_values_from_filename(filename):
     """
     Extracts the Completeness, Sequence Length, Horizon, and Window Size values

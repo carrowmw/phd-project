@@ -1,6 +1,6 @@
 import importlib
 from functools import reduce
-from src.utils.general_utils import load_config
+from src.utils.general_utils import load_config, should_execute_step
 
 
 def apply_steps(df, steps_config):
@@ -17,6 +17,10 @@ def apply_steps(df, steps_config):
     """
 
     def apply_step(df, step):
+        if not should_execute_step(step):
+            # If execute_step is False, skip this step
+            print(f"Skipping step: {step['name']} as per the configuration.")
+            return df
         module_name, function_name = step["name"].rsplit(".", 1)
         module = importlib.import_module(module_name)
         func = getattr(module, function_name)
@@ -40,7 +44,12 @@ def process_data(df, config_path):
     """
     config = load_config(config_path)
     # Dynamically identify the steps key based on what's available in the config
-    for key in ["preprocessing_steps", "feature_engineering_steps", "model_steps"]:
+    for key in [
+        "preprocessing_steps",
+        "feature_engineering_steps",
+        "model_steps",
+        "training_steps",
+    ]:
         if key in config:
             steps_config = config[key]
             break

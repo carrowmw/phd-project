@@ -1,7 +1,15 @@
-import os
-from apps.missing_data_app import retrieve_app_data, start_flask_app
+import torch
+from src.pipeline import (
+    preprocess_raw_data,
+    apply_feature_engineering,
+    load_training_data,
+    train_model,
+)
 
-if __name__ == "__main__":
-    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
-        retrieve_app_data()  # This will run only in the child process
-    start_flask_app()
+
+torch.backends.mps.is_available()
+# Execute pipeline steps
+preprocessed_dfs = preprocess_raw_data()
+engineered_dfs = apply_feature_engineering(preprocessed_dfs)
+training_data_list = load_training_data(engineered_dfs)
+training_metrics_list = train_model(training_data_list)

@@ -1,28 +1,25 @@
+### Possible feature engineering steps
+
 {
     "feature_engineering_steps": [
         {
             "name": "src.data_processing.feature_engineering.add_term_dates_feature",
-            "execute_step": false,
             "kwargs": {}
         },
         {
             "name": "src.data_processing.feature_engineering.create_periodicity_features",
-            "execute_step": true,
             "kwargs": {}
         },
         {
             "name": "src.data_processing.feature_engineering.extract_time_features",
-            "execute_step": true,
             "kwargs": {}
         },
         {
             "name": "src.data_processing.feature_engineering.scale_features",
-            "execute_step": true,
             "kwargs": {}
         },
         {
             "name": "src.data_processing.feature_engineering.resample_frequency",
-            "execute_step": false,
             "kwargs": {
                 "frequency": null
             }

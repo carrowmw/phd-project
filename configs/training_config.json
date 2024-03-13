@@ -1,9 +1,16 @@
 {
-    "kwargs": {
-        "epochs": 50,
-        "device": "mps",
-        "optimiser": "adam",
-        "lr": 0.01,
-        "criterion": "mse",
-    }
+    "training_steps": [
+        {
+            "name": "src.training.train.train",
+            "execute_step": true,
+            "kwargs": {
+                "epochs": 2,
+                "device": "mps",
+                "optimiser": "adam",
+                "lr": 0.01,
+                "criterion": "mse",
+                "schedular_step_size": 0.001
+            }
+        }
+    ]
 }
